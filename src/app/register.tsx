@@ -22,7 +22,6 @@ export default function Register() {
   const badgeStore = useBadgeStore()
 
   async function handleRegister() {
-    console.log("Entrou aqui")
     try {
       if (!name.trim() || !email.trim()) {
         return Alert.alert("Inscrição", "Preencha todos os campos!")
@@ -97,7 +96,7 @@ export default function Register() {
 
         <Button
           title="Realizar inscrição"
-          onPress={()=>handleRegister}
+          onPress={handleRegister}
           isLoading={isLoading}
         />
 
